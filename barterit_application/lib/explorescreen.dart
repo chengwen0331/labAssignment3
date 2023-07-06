@@ -301,6 +301,19 @@ class _ExploreScreenState extends State<ExploreScreen> {
       return;
     }*/
 
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const AlertDialog(
+          title: Text("Please Wait"),
+          content: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                  ),
+          //content: Text("Registration..."),
+        );
+      },
+    );
+
     http.post(Uri.parse("${MyConfig().SERVER}/barterit_application/php/load_items.php"),
         body: {
           //"userid": widget.user.id,

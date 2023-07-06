@@ -77,7 +77,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   void onTabTapped(int index) {
-    //print(index);
+
     setState(() {
       _currentIndex = index;
       if (_currentIndex == 0) {
